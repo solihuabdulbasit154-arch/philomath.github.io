@@ -1,0 +1,11 @@
+/* 80 mm thermal POS receipt */
+.receipt-dialog{width:min(410px,calc(100% - 24px));padding:18px;background:#e9ecea}
+.receipt-paper{width:80mm;max-width:100%;margin:auto;padding:7mm 5mm;background:#fff;color:#000;font:12px/1.35 'Courier New',monospace;box-shadow:0 3px 16px #0002}
+.thermal-head{text-align:center}.thermal-logo{display:grid;place-items:center;width:34px;height:34px;margin:0 auto 7px;border:2px solid #000;border-radius:50%;font-weight:900}
+.thermal-head h2{margin:0 0 4px;font:900 17px/1.15 'Courier New',monospace;text-transform:uppercase}.thermal-head p,.thermal-foot p{margin:2px 0}
+.thermal-rule{height:1px;margin:10px 0;border-top:1px dashed #000}.thermal-meta>div,.thermal-columns,.thermal-item-line,.thermal-totals>div{display:flex;justify-content:space-between;gap:8px}
+.thermal-meta>div span:last-child,.thermal-meta>div b:last-child{text-align:right}.thermal-columns{font-weight:900}.thermal-item{margin:8px 0}.thermal-item-name{font-weight:700;text-transform:uppercase}.thermal-item-line{padding-left:8px}
+.thermal-totals{display:grid;gap:4px}.thermal-grand{margin-top:3px;padding-top:6px;border-top:1px solid #000;font-size:16px;font-weight:900}.thermal-foot{text-align:center}
+.thermal-barcode{margin:13px 0 0;font:bold 20px/1 'Courier New',monospace;letter-spacing:-2px}.thermal-foot small{font-size:9px}.thermal-powered{margin-top:14px!important;font-size:9px}.receipt-actions{margin:17px 0 0}
+@page{size:80mm auto;margin:0}
+@media print{html,body{width:80mm!important;min-width:80mm!important;margin:0!important;padding:0!important;background:#fff!important}body>*:not(#receiptDialog){display:none!important}#receiptDialog{display:block!important;position:static!important;width:80mm!important;max-width:none!important;margin:0!important;padding:0!important;border:0!important;background:#fff!important;box-shadow:none!important}.receipt-paper{width:80mm!important;max-width:none!important;margin:0!important;padding:5mm 4mm!important;box-shadow:none!important}.receipt-actions{display:none!important}}

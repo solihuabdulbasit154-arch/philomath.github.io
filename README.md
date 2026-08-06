@@ -1,33 +1,29 @@
-# 🛒 PHILOMATH MINI MART SYSTEM
-A professional Mini Mart management system with POS, inventory, and sales tracking.
-## 🌐 Live Demo
-[View Live Demo](https://admin.github.io/philomath-mart/)
+# Philomath Mini Mart
 
-## 🚀 Features
-- 📊 Dashboard with real-time stats
-- 🛍 POS system with receipt printing
-- 📦 Inventory management
-- 💰 Sales tracking & reports
-- 📱 Mobile responsive design l
+A PHP 8 mini-mart system with secure login, inventory, transactional checkout, printable receipts, sales history, and store settings.
 
-## 🎯 Quick Start
-1. Clone or download this repository
-2. Open 'index.html' in any browser
-3. Login with:
-   - Username: 'admin'
-   - Password: 'admin123'
+## Run locally
 
-## 💡 Usage
-- **Add products** in Products tab
-- **Make sales** in POS System tab
-- **View reports** in Sales History tab
-- **Customize settings** in Settings tab
+```bash
+php -S localhost:8000
+```
 
-## 🛠 Tech Stack
-- HTML5, CSS3, Javascript
-- LocalStorage for data persistence
-- Font Awesome icons
-- Google Fonts
+Open `http://localhost:8000` and sign in with `admin` / `admin123`. Change the default password immediately under **Settings**.
 
-## 🗒 License
-MIT License - Free to use and modify
+## Requirements
+
+- PHP 8.1 or newer
+- PDO SQLite extension
+- Write access to the project directory (the `data/` directory is created automatically)
+
+## Architecture
+
+- `index.php` — responsive application shell
+- `api.php` — authenticated JSON API
+- `lib/bootstrap.php` — sessions, database, migrations, and initial data
+- `assets/` — application CSS and JavaScript
+- `data/philomart.sqlite` — runtime database (ignored by Git)
+
+Checkout uses a database transaction, so a receipt and its stock deductions always succeed or fail together. Prices are read from the database during checkout rather than trusted from the browser.
+
+> GitHub Pages cannot execute PHP. Deploy this version to PHP hosting, Apache/Nginx, or use PHP's built-in server.
